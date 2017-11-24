@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainGUI {
-
+//fari
   MainGUI mainGUI;
   JFrame newFrame = new JFrame("Colt Chat v0.1");
   JButton sendMessage;
