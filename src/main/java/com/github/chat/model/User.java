@@ -46,13 +46,7 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
     So haben wir lesenen Zugriff auf Instanzvariablen, obwohl sie private sind.
 
      */
-    public String getUsername() {
-        return username;
-    }
 
-    public String getColor() {
-        return color;
-    }
 
     /*
     Man hat bis jetzt nur lesenen Zugriff, das heißt, man kann den Wert nur abfragen, aber noch nicht ändern!
@@ -62,11 +56,19 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
     und zwar den Wert, den man setzten will.
      */
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+  public String getUsername() {
+    return username;
+  }
 
-    public void setColor (String color) {
-        this.color = color;
-    }
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
 }
