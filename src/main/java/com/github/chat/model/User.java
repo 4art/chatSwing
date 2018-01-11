@@ -4,7 +4,7 @@ public class User {
 
     private String username;
     private String color;
-    private String id;
+
 
 
     /*
@@ -35,13 +35,7 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
 
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     /*
     Instanzmethoden: bestimmen die Interaktion mit dem Objekt, das heißt, was kann man mit dem Objekt machen?
