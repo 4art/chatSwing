@@ -1,11 +1,11 @@
-package com.github.chat;
+package com.github.chat;  //Pakete, die ich brauche
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainGUI {
+public class MainGUI {      //Klasse
 //fari
   MainGUI mainGUI;
   JFrame newFrame = new JFrame("Colt Chat v0.1");
@@ -15,7 +15,7 @@ public class MainGUI {
   JTextField usernameChooser;
   JFrame preFrame;
 
-  public static void main(String[] args) {
+  public static void main(String[] args) {      //Mainfunktion
     try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (Exception e) {
@@ -26,7 +26,7 @@ public class MainGUI {
   }
 
 
-  public void preDisplay() {
+  public void preDisplay() {          //Instanzmethode
     newFrame.setVisible(false);
     preFrame = new JFrame("Choose your username!(Colt chat v0.1");
     usernameChooser = new JTextField();
@@ -52,7 +52,7 @@ public class MainGUI {
     enterServer.addActionListener(new enterServerButtonListener());
   }
 
-  public void display() {
+    public void display() {           //Instanzmethode
     newFrame.setVisible(true);
     JPanel southPanel = new JPanel();
     newFrame.add(BorderLayout.SOUTH, southPanel);
@@ -82,7 +82,7 @@ public class MainGUI {
     newFrame.setSize(470, 300);
   }
 
-  class sendMessageButtonListener implements ActionListener {
+  class sendMessageButtonListener implements ActionListener {     //Klasse
     public void actionPerformed(ActionEvent event) {
       if (messageBox.getText().length() < 1) {
         // do nothing
@@ -98,7 +98,7 @@ public class MainGUI {
 
   String username;
 
-  class enterServerButtonListener implements ActionListener {
+  class enterServerButtonListener implements ActionListener {     //KLasse
     public void actionPerformed(ActionEvent event) {
       username = usernameChooser.getText();
       if (username.length() < 1) {
