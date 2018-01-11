@@ -59,7 +59,7 @@ public class MainGUI {      //Klasse
     southPanel.setBackground(Color.WHITE);
     southPanel.setLayout(new GridBagLayout());
 
-    messageBox = new JTextField(30);
+    messageBox = new JTextField(38);
     sendMessage = new JButton("Send Message");
     chatBox = new JTextArea();
     chatBox.setEditable(false);
