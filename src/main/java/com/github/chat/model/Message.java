@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 public class Message {
 
-    private String id;
     private User user;          //KLasse User und user Variablenname
     private String message;
     private LocalDateTime localtime;
@@ -20,13 +19,7 @@ public class Message {
         this.localtime = localtime;
     }
 
-    public String getId(){
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public User getUser(){
         return user;
