@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class MainGUI {      //Klasse
 //fari
   MainGUI mainGUI;
-  JFrame newFrame = new JFrame("Colt Chat v0.1");
+  JFrame newFrame = new JFrame("Safe Chat (Gruppe B)");
   JButton sendMessage;
   JTextField messageBox;
   JTextArea chatBox;
@@ -28,7 +28,7 @@ public class MainGUI {      //Klasse
 
   public void preDisplay() {          //Instanzmethode
     newFrame.setVisible(false);
-    preFrame = new JFrame("Choose your username!(Colt chat v0.1");
+    preFrame = new JFrame("Choose your username!(Safe Chat (Gruppe B)");
     usernameChooser = new JTextField();
     JLabel chooseUsernameLabel = new JLabel("Pick a username:");
     JButton enterServer = new JButton("Enter Chat Server");
@@ -47,7 +47,7 @@ public class MainGUI {      //Klasse
     preFrame.add(BorderLayout.CENTER, prePanel);
     preFrame.add(BorderLayout.SOUTH, enterServer);
     preFrame.setVisible(true);
-    preFrame.setSize(300, 300);
+    preFrame.setSize(400, 400);
 
     enterServer.addActionListener(new enterServerButtonListener());
   }
@@ -56,7 +56,7 @@ public class MainGUI {      //Klasse
     newFrame.setVisible(true);
     JPanel southPanel = new JPanel();
     newFrame.add(BorderLayout.SOUTH, southPanel);
-    southPanel.setBackground(Color.BLUE);
+    southPanel.setBackground(Color.WHITE);
     southPanel.setLayout(new GridBagLayout());
 
     messageBox = new JTextField(30);
