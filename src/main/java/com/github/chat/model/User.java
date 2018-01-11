@@ -23,7 +23,10 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
 
  */
 
+    public User() {
 
+
+    }
     public User(String username, String color) {
 
         this.username = username;
