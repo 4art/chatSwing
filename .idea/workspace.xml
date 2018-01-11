@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73471cb3-f898-4738-beed-7c972739cf43" name="Default" comment="my comments">
+    <list default="true" id="73471cb3-f898-4738-beed-7c972739cf43" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/github/chat/MainGUI.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/chat/MainGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swingtodo.iml" afterPath="$PROJECT_DIR$/swingtodo.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +38,21 @@
       <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/chat/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+            <state relative-caret-position="332">
+              <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JPanel.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/javax/swing/JPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -352,11 +361,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515668693109</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="my comments&#10;Bei JFrame newFrame und bei preFrame wurde der&#10;Name des Chatfensters von 'Colt chat v0.1' zu 'Safe Chat (Gruppe B)'gändert.&#10;&#10;Die Größe des Erstens Fensters wurde von 300 auf 400 geändert!&#10;&#10;Im Chatfenster wurde das Eingabefeld von blau zu weiss geändert!">
+      <created>1515671082384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515671082384</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11828000" />
+    <option name="totallyTimeSpent" value="12406000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,21 +450,14 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="zgfjhgfjh" />
     <MESSAGE value="my comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="my comments" />
+    <MESSAGE value="my comments&#10;Bei JFrame newFrame und bei preFrame wurde der&#10;Name des Chatfensters von 'Colt chat v0.1' zu 'Safe Chat (Gruppe B)'gändert.&#10;&#10;Die Größe des Erstens Fensters wurde von 300 auf 400 geändert!&#10;&#10;Im Chatfenster wurde das Eingabefeld von blau zu weiss geändert!" />
+    <option name="LAST_COMMIT_MESSAGE" value="my comments&#10;Bei JFrame newFrame und bei preFrame wurde der&#10;Name des Chatfensters von 'Colt chat v0.1' zu 'Safe Chat (Gruppe B)'gändert.&#10;&#10;Die Größe des Erstens Fensters wurde von 300 auf 400 geändert!&#10;&#10;Im Chatfenster wurde das Eingabefeld von blau zu weiss geändert!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="46" lean-forward="false" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -824,10 +833,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/javax/swing/JPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/chat/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        <state relative-caret-position="332">
+          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

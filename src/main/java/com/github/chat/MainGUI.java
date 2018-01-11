@@ -79,7 +79,7 @@ public class MainGUI {      //Klasse
     chatBox.setFont(new Font("Serif", Font.PLAIN, 15));
     sendMessage.addActionListener(new sendMessageButtonListener());
     newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    newFrame.setSize(470, 300);
+    newFrame.setSize(600, 600);
   }
 
   class sendMessageButtonListener implements ActionListener {     //Klasse
