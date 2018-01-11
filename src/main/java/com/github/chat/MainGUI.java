@@ -1,21 +1,21 @@
-package com.github.chat;
+package com.github.chat;  //Pakete, die ich brauche
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainGUI {
-
+public class MainGUI {      //Klasse
+//fari
   MainGUI mainGUI;
-  JFrame newFrame = new JFrame("Colt Chat v0.1");
+  JFrame newFrame = new JFrame("Safe Chat (Gruppe B)");
   JButton sendMessage;
   JTextField messageBox;
   JTextArea chatBox;
   JTextField usernameChooser;
   JFrame preFrame;
 
-  public static void main(String[] args) {
+  public static void main(String[] args) {      //Mainfunktion
     try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (Exception e) {
@@ -26,9 +26,9 @@ public class MainGUI {
   }
 
 
-  public void preDisplay() {
+  public void preDisplay() {          //Instanzmethode
     newFrame.setVisible(false);
-    preFrame = new JFrame("Choose your username!(Colt chat v0.1");
+    preFrame = new JFrame("Choose your username!(Safe Chat (Gruppe B)");
     usernameChooser = new JTextField();
     JLabel chooseUsernameLabel = new JLabel("Pick a username:");
     JButton enterServer = new JButton("Enter Chat Server");
@@ -47,19 +47,19 @@ public class MainGUI {
     preFrame.add(BorderLayout.CENTER, prePanel);
     preFrame.add(BorderLayout.SOUTH, enterServer);
     preFrame.setVisible(true);
-    preFrame.setSize(300, 300);
+    preFrame.setSize(400, 400);
 
     enterServer.addActionListener(new enterServerButtonListener());
   }
 
-  public void display() {
+    public void display() {           //Instanzmethode
     newFrame.setVisible(true);
     JPanel southPanel = new JPanel();
     newFrame.add(BorderLayout.SOUTH, southPanel);
-    southPanel.setBackground(Color.BLUE);
+    southPanel.setBackground(Color.WHITE);
     southPanel.setLayout(new GridBagLayout());
 
-    messageBox = new JTextField(30);
+    messageBox = new JTextField(38);
     sendMessage = new JButton("Send Message");
     chatBox = new JTextArea();
     chatBox.setEditable(false);
@@ -79,10 +79,10 @@ public class MainGUI {
     chatBox.setFont(new Font("Serif", Font.PLAIN, 15));
     sendMessage.addActionListener(new sendMessageButtonListener());
     newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    newFrame.setSize(470, 300);
+    newFrame.setSize(600, 600);
   }
 
-  class sendMessageButtonListener implements ActionListener {
+  class sendMessageButtonListener implements ActionListener {     //Klasse
     public void actionPerformed(ActionEvent event) {
       if (messageBox.getText().length() < 1) {
         // do nothing
@@ -98,7 +98,7 @@ public class MainGUI {
 
   String username;
 
-  class enterServerButtonListener implements ActionListener {
+  class enterServerButtonListener implements ActionListener {     //KLasse
     public void actionPerformed(ActionEvent event) {
       username = usernameChooser.getText();
       if (username.length() < 1) {
