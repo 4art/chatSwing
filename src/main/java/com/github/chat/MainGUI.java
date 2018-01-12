@@ -1,17 +1,13 @@
-package com.github.chat;  //Pakete, die ich brauche
+package com.github.chat;
 
 import com.github.chat.model.Message;
 import com.github.chat.model.User;
 import com.github.chat.ui.LogInPage;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class MainGUI {      //Klasse
-//fari
+public class MainGUI {
  private MainGUI mainGUI;
  private JFrame newFrame = new JFrame("Safe Chat (Gruppe B)");
  private JButton sendMessage;
@@ -90,7 +86,7 @@ public class MainGUI {      //Klasse
     this.preFrame = preFrame;
   }
 
-  public static void main(String[] args) {      //Mainfunktion
+  public static void main(String[] args) {
     try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (Exception e) {
