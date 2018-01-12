@@ -6,6 +6,7 @@ import com.github.chat.ui.LogInPage;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainGUI {
  private MainGUI mainGUI;
@@ -16,9 +17,9 @@ public class MainGUI {
  private JTextField usernameChooser;
  private JFrame preFrame;
  private User user;
- private ArrayList<Message> messageList;
+ private List<Message> messageList;
 
- MainGUI(){
+ public MainGUI(){
    messageList = new ArrayList<Message>();
  }
 
