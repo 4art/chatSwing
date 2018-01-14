@@ -2,6 +2,7 @@ package com.github.chat.ui;
 
 import com.github.chat.MainGUI;
 import com.github.chat.model.Message;
+import com.github.chat.service.MessageMonitoring;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +20,8 @@ public class Chat {
   public void setMainGUI(MainGUI mainGUI) {
     this.mainGUI = mainGUI;
   }
+
+  private MessageMonitoring messageMonitoring;
 
   public void display() {           //Instanzmethode
     mainGUI.getNewFrame().setVisible(true);
@@ -48,6 +51,10 @@ public class Chat {
     mainGUI.getSendMessage().addActionListener(new sendMessageButtonListener());
     mainGUI.getNewFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     mainGUI.getNewFrame().setSize(600, 600);
+    //creating object for message monitoring
+    messageMonitoring = new MessageMonitoring(mainGUI.getChatBox());
+    //start monitoring and loading all messages from DB
+    messageMonitoring.start();
   }
 
   class sendMessageButtonListener implements ActionListener {     //Klasse
@@ -62,8 +69,9 @@ public class Chat {
         message.setMessage(mainGUI.getMessageBox().getText());
         message.setLocaltime(LocalDateTime.now());
         message.setUser(mainGUI.getUser());
-        mainGUI.appendMessageList(message);
-        mainGUI.getChatBox().append("<" + mainGUI.getUser().getUsername() + " " + message.getLocaltime().toString() + ">:  " + mainGUI.getMessageBox().getText() + "\n");
+        //saving message to DB
+        messageMonitoring.getBackend().setMessage(message);
+        //clear message box(input)
         mainGUI.getMessageBox().setText("");
       }
     }

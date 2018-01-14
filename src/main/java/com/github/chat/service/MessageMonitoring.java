@@ -2,8 +2,11 @@ package com.github.chat.service;
 
 import com.github.chat.model.Message;
 
+import javax.swing.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
-
+//fari + erika
 public class MessageMonitoring extends Thread {
   private List<Message> messages;
   private final Backend backend = new Backend();
@@ -26,16 +29,36 @@ public class MessageMonitoring extends Thread {
     return messages;
   }
 
+  private JTextArea chatbox;
+  //erika
+  public MessageMonitoring(JTextArea chatbox){
+    super();
+    this.chatbox = chatbox;
+  }
+  //fari
+  private void setChatMessages(List<Message> chatMessages){
+    String messages = "";
+    for (Message message : chatMessages){
+      messages = messages + "<" + message.getUser().getUsername() + " " + dateTimeFormatter(message.getLocaltime()) + ">:  " + message.getMessage() + "\n";
+    }
+    chatbox.setText(messages);
+  }
+  //fari
+  private String dateTimeFormatter(LocalDateTime localDateTime){
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM HH:mm");
+    return localDateTime.format(formatter);
+  }
+  //erika
   @Override
   public void run() {
     monitoring();
   }
-
+  //erika
   private void monitoring() {
     try {
       messages = backend.getMessages();
-      System.out.println("messages");
-      messages.forEach(message -> System.out.println(message.getMessage()));
+      setChatMessages(messages);
       Thread.sleep(delay);
       monitoring();
     } catch (InterruptedException e) {
@@ -43,8 +66,4 @@ public class MessageMonitoring extends Thread {
     }
   }
 
-  public static void main(String[] args) {
-    MessageMonitoring messageMonitoring = new MessageMonitoring();
-    messageMonitoring.start();
-  }
 }
