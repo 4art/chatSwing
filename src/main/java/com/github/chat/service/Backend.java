@@ -10,9 +10,12 @@ import org.springframework.web.client.RestTemplate;
 public class Backend {
     private RestTemplate restTemplate = new RestTemplate();
 
+//    private String url = "http://rest.metraf.eu";
+    private String url = "http://localhost:8080";
+
     public Health checkHealth(){
         ResponseEntity<Health> healthResponseEntity = restTemplate.getForEntity(
-          "https://d1fuzbayh0.execute-api.eu-central-1.amazonaws.com/prod", Health.class
+          url+ "/", Health.class
         );
         Health health = healthResponseEntity.getBody();
         return health;
@@ -23,5 +26,11 @@ public class Backend {
         );
         Weather weather = weatherResponseEntity.getBody();
         return weather;
+    }
+
+    public static void main(String[] args) {
+        Backend backend = new Backend();
+        System.out.println(backend.checkHealth().isStatus());
+        System.out.println(backend.checkWeather().getName());
     }
 }

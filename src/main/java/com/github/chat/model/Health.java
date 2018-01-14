@@ -1,13 +1,13 @@
 package com.github.chat.model;
 
 public class Health {
-    private boolean health;
+    private boolean status;
 
-    public boolean isHealth() {
-        return health;
+    public boolean isStatus() {
+        return status;
     }
 
-    public void setHealth(boolean health) {
-        this.health = health;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }
