@@ -15,8 +15,8 @@ import java.util.List;
 public class Backend {
   private RestTemplate restTemplate = new RestTemplate();
 
-  //    private String url = "http://rest.metraf.eu";
-  private String url = "http://localhost:8080";
+      private String url = "http://rest.metraf.eu";
+//  private String url = "http://localhost:8080";
 
   private String token = "EzCXxjmQMjxBdQaNHbyiZwoiwrFdnyxXQqKnNywJ3JwL";
 
