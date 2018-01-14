@@ -9,19 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainGUI {
- private MainGUI mainGUI;
- private JFrame newFrame = new JFrame("Safe Chat (Gruppe B)");
- private JButton sendMessage;
- private JTextField messageBox;
- private JTextArea chatBox;
- private JTextField usernameChooser;
- private JFrame preFrame;
- private User user;
- private List<Message> messageList;
+  private MainGUI mainGUI;
+  private JFrame newFrame = new JFrame("Safe Chat (Gruppe B)");
+  private JButton sendMessage;
+  private JTextField messageBox;
+  private JTextArea chatBox;
+  private JTextField usernameChooser;
+  private JFrame preFrame;
+  private User user;
+  private List<Message> messageList;
 
- public MainGUI(){
-   messageList = new ArrayList<Message>();
- }
+  public MainGUI() {
+    messageList = new ArrayList<Message>();
+  }
 
   public User getUser() {
     return user;
@@ -99,7 +99,7 @@ public class MainGUI {
     logInPage.preDisplay();
   }
 
-  public void appendMessageList(Message message){
+  public void appendMessageList(Message message) {
     messageList.add(message);
   }
 
