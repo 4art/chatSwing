@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class Chat {
   private MainGUI mainGUI;
@@ -67,7 +68,7 @@ public class Chat {
       } else {
         Message message = new Message();
         message.setMessage(mainGUI.getMessageBox().getText());
-        message.setLocaltime(LocalDateTime.now());
+        message.setLocaltime(LocalDateTime.now(ZoneId.of("Europe/Paris")));
         message.setUser(mainGUI.getUser());
         //saving message to DB
         messageMonitoring.getBackend().setMessage(message);

@@ -10,13 +10,14 @@ import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 public class Backend {
   private RestTemplate restTemplate = new RestTemplate();
 
-//  private String url = "http://rest.metraf.eu";
-  private String url = "http://localhost:8080";
+  private String url = "http://safechat.metraf.eu";
+//  private String url = "http://localhost:8080";
 
   private String token = "EzCXxjmQMjxBdQaNHbyiZwoiwrFdnyxXQqKnNywJ3JwL";
 
@@ -66,7 +67,7 @@ public class Backend {
     User user = new User("erika", "#000000");
     message.setUser(user);
     message.setMessage("some another message");
-    message.setLocaltime(LocalDateTime.now());
+    message.setLocaltime(LocalDateTime.now(ZoneId.of("Europe/Paris")));
     return message;
   }
 
