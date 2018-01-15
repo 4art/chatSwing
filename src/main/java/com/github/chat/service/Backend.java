@@ -15,7 +15,7 @@ import java.util.List;
 public class Backend {
   private RestTemplate restTemplate = new RestTemplate();
 
-  //    private String url = "http://rest.metraf.eu";
+//  private String url = "http://rest.metraf.eu";
   private String url = "http://localhost:8080";
 
   private String token = "EzCXxjmQMjxBdQaNHbyiZwoiwrFdnyxXQqKnNywJ3JwL";
@@ -39,17 +39,14 @@ public class Backend {
   public List<Message> getMessages() {
     ParameterizedTypeReference<List<Message>> listParameterizedTypeReference = new ParameterizedTypeReference<List<Message>>() {
     };
-    final ResponseEntity<List<Message>> listResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.GET, null, listParameterizedTypeReference);
+    final ResponseEntity<List<Message>> listResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.GET, new HttpEntity<>(getHeaders()), listParameterizedTypeReference);
     return listResponseEntity.getBody();
   }
 
   public Message setMessage(Message message) {
     ParameterizedTypeReference<Message> reference = new ParameterizedTypeReference<Message>() {
     };
-    HttpHeaders headers = new HttpHeaders();
-    headers.setContentType(MediaType.APPLICATION_JSON);
-    headers.add("x-auth-token", token);
-    final ResponseEntity<Message> messageResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.POST, new HttpEntity<>(message), reference);
+    final ResponseEntity<Message> messageResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.POST, new HttpEntity<>(message, getHeaders()), reference);
     return messageResponseEntity.getBody();
   }
 
@@ -71,5 +68,12 @@ public class Backend {
     message.setMessage("some another message");
     message.setLocaltime(LocalDateTime.now());
     return message;
+  }
+
+  private HttpHeaders getHeaders() {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    headers.add("x-auth-token", token);
+    return headers;
   }
 }
