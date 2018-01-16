@@ -51,17 +51,6 @@ public class Backend {
     return messageResponseEntity.getBody();
   }
 
-  public static void main(String[] args) {
-    Backend backend = new Backend();
-    System.out.println(backend.checkHealth().isStatus());
-    System.out.println(backend.checkWeather().getName());
-//    System.out.println(backend.setMessage(backend.createSimpleMessage()).getMessage());
-    System.out.println("get messages");
-    for (Message message : backend.getMessages()) {
-      System.out.println(message.getMessage());
-    }
-  }
-
   private Message createSimpleMessage() { //just for test
     Message message = new Message();
     User user = new User("erika", "#000000");
