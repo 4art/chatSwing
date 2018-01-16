@@ -31,7 +31,7 @@ public class Chat {
     southPanel.setBackground(Color.WHITE);
     southPanel.setLayout(new GridBagLayout());
 
-    mainGUI.setMessageBox(new JTextField(38));
+    mainGUI.setMessageBox(new JTextField(30));
     mainGUI.setSendMessage(new JButton("Send Message"));
     mainGUI.setChatBox(new JTextArea());
     mainGUI.getChatBox().setEditable(false);
@@ -56,6 +56,21 @@ public class Chat {
     messageMonitoring = new MessageMonitoring(mainGUI.getChatBox());
     //start monitoring and loading all messages from DB
     messageMonitoring.start();
+    
+    JButton colorButton = new JButton("Color");
+    southPanel.add(colorButton,right);
+    colorButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            Color newColor = JColorChooser.showDialog(
+                            mainGUI.getChatBox(),
+                            "Choose Background Color",
+                            mainGUI.getChatBox().getBackground());
+            if(newColor != null){
+            mainGUI.getChatBox().setBackground(newColor);
+                }
+            }
+        });
+          
   }
 
   class sendMessageButtonListener implements ActionListener {     //Klasse
