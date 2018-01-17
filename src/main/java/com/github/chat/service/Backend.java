@@ -10,13 +10,14 @@ import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 public class Backend {
   private RestTemplate restTemplate = new RestTemplate();
 
-  //    private String url = "http://rest.metraf.eu";
-  private String url = "http://localhost:8080";
+  private String url = "http://safechat.metraf.eu";
+//  private String url = "http://localhost:8080";
 
   private String token = "EzCXxjmQMjxBdQaNHbyiZwoiwrFdnyxXQqKnNywJ3JwL";
 
@@ -39,29 +40,15 @@ public class Backend {
   public List<Message> getMessages() {
     ParameterizedTypeReference<List<Message>> listParameterizedTypeReference = new ParameterizedTypeReference<List<Message>>() {
     };
-    final ResponseEntity<List<Message>> listResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.GET, null, listParameterizedTypeReference);
+    final ResponseEntity<List<Message>> listResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.GET, new HttpEntity<>(getHeaders()), listParameterizedTypeReference);
     return listResponseEntity.getBody();
   }
 
   public Message setMessage(Message message) {
     ParameterizedTypeReference<Message> reference = new ParameterizedTypeReference<Message>() {
     };
-    HttpHeaders headers = new HttpHeaders();
-    headers.setContentType(MediaType.APPLICATION_JSON);
-    headers.add("x-auth-token", token);
-    final ResponseEntity<Message> messageResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.POST, new HttpEntity<>(message), reference);
+    final ResponseEntity<Message> messageResponseEntity = restTemplate.exchange(url + "/message", HttpMethod.POST, new HttpEntity<>(message, getHeaders()), reference);
     return messageResponseEntity.getBody();
-  }
-
-  public static void main(String[] args) {
-    Backend backend = new Backend();
-    System.out.println(backend.checkHealth().isStatus());
-    System.out.println(backend.checkWeather().getName());
-//    System.out.println(backend.setMessage(backend.createSimpleMessage()).getMessage());
-    System.out.println("get messages");
-    for (Message message : backend.getMessages()) {
-      System.out.println(message.getMessage());
-    }
   }
 
   private Message createSimpleMessage() { //just for test
@@ -69,7 +56,14 @@ public class Backend {
     User user = new User("erika", "#000000");
     message.setUser(user);
     message.setMessage("some another message");
-    message.setLocaltime(LocalDateTime.now());
+    message.setLocaltime(LocalDateTime.now(ZoneId.of("Europe/Paris")));
     return message;
+  }
+
+  private HttpHeaders getHeaders() {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    headers.add("x-auth-token", token);
+    return headers;
   }
 }
