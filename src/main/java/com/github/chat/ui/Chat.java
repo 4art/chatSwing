@@ -86,7 +86,7 @@ public class Chat {
         message.setLocaltime(LocalDateTime.now(ZoneId.of("Europe/Paris")));
         message.setUser(mainGUI.getUser());
         //saving message to DB
-        messageMonitoring.getBackend().setMessage(message);
+        messageMonitoring.getBackendImpl().setMessage(message);
         //clear message box(input)
         mainGUI.getMessageBox().setText("");
       }
