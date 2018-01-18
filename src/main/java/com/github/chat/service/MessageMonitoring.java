@@ -9,12 +9,12 @@ import java.util.List;
 //fari + erika
 public class MessageMonitoring extends Thread {
   private List<Message> messages;
-  private final Backend backend = new Backend();
+  private final BackendImpl backendImpl = new BackendImpl();
 
   private int delay = 500;
 
-  public Backend getBackend() {
-    return backend;
+  public BackendImpl getBackendImpl() {
+    return backendImpl;
   }
 
   public int getDelay() {
@@ -57,7 +57,7 @@ public class MessageMonitoring extends Thread {
   //erika
   private void monitoring() {
     try {
-      messages = backend.getMessages();
+      messages = backendImpl.getMessages();
       setChatMessages(messages);
       Thread.sleep(delay);
       monitoring();
