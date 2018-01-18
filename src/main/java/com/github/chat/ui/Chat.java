@@ -77,10 +77,9 @@ public class Chat {
     public void actionPerformed(ActionEvent event) {
       if (mainGUI.getMessageBox().getText().length() < 1) {
         // do nothing
-      } /*else if (mainGUI.getMessageBox().getText().equals(".clear")) {
-        mainGUI.getChatBox().setText("Cleared all messages\n");
-        mainGUI.getMessageBox().setText("");
-      }*/ else {
+      }
+
+      else {
         Message message = new Message();
         message.setMessage(mainGUI.getMessageBox().getText());
         message.setLocaltime(LocalDateTime.now(ZoneId.of("Europe/Paris")));
