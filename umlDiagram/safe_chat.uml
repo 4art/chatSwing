@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="282.0" y="210.0">com.github.chat.model.Message</node>
+    <node x="0.0" y="464.0">com.github.chat.ui.LogInPage</node>
+    <node x="317.46271929824553" y="0.0">com.github.chat.model.User</node>
+    <node x="438.5982456140351" y="754.0">com.github.chat.service.MessageMonitoring</node>
+    <node x="513.4627192982455" y="133.0">com.github.chat.model.Weather</node>
+    <node x="81.63771929824554" y="721.0">com.github.chat.MainGUI</node>
+    <node x="555.9315789473685" y="442.0">com.github.chat.service.Backend</node>
+    <node x="276.5982456140351" y="1044.0">com.github.chat.ui.Chat</node>
+    <node x="704.4627192982455" y="232.0">com.github.chat.model.Health</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.github.chat.ui.Chat" target="com.github.chat.MainGUI">
+      <point x="-117.75" y="-48.5" />
+      <point x="315.8482456140351" y="1024.0" />
+      <point x="152.63771929824554" y="1024.0" />
+      <point x="-71.0" y="136.5" />
+    </edge>
+    <edge source="com.github.chat.service.MessageMonitoring" target="com.github.chat.model.Message">
+      <point x="-64.80000000000007" y="-103.5" />
+      <point x="535.7982456140351" y="691.0" />
+      <point x="373.16885964912285" y="691.0" />
+      <point x="373.16885964912285" y="422.0" />
+      <point x="398.08333333333337" y="422.0" />
+      <point x="16.58333333333337" y="47.5" />
+    </edge>
+    <edge source="com.github.chat.ui.Chat" target="com.github.chat.service.MessageMonitoring">
+      <point x="39.25" y="-48.5" />
+      <point x="472.8482456140351" y="1024.0" />
+      <point x="519.598245614035" y="1024.0" />
+      <point x="-81.0" y="103.5" />
+    </edge>
+    <edge source="com.github.chat.service.Backend" target="com.github.chat.model.Health">
+      <point x="22.33333333333337" y="-114.5" />
+      <point x="712.2649122807018" y="402.0" />
+      <point x="776.4627192982455" y="402.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.github.chat.MainGUI" target="com.github.chat.ui.LogInPage">
+      <point x="-124.25" y="-136.5" />
+      <point x="99.38771929824554" y="701.0" />
+      <point x="31.25" y="701.0" />
+      <point x="-93.75" y="92.5" />
+    </edge>
+    <edge source="com.github.chat.service.Backend" target="com.github.chat.model.Weather">
+      <point x="-22.33333333333337" y="-114.5" />
+      <point x="667.598245614035" y="402.0" />
+      <point x="598.9627192982455" y="402.0" />
+      <point x="0.0" y="124.5" />
+    </edge>
+    <edge source="com.github.chat.model.Message" target="com.github.chat.model.User">
+      <point x="49.75" y="-47.5" />
+      <point x="431.25" y="113.0" />
+      <point x="406.71271929824553" y="113.0" />
+      <point x="12.75" y="36.5" />
+    </edge>
+    <edge source="com.github.chat.MainGUI" target="com.github.chat.model.Message">
+      <point x="124.25" y="-136.5" />
+      <point x="347.88771929824554" y="701.0" />
+      <point x="337.0149122807018" y="701.0" />
+      <point x="337.0149122807018" y="422.0" />
+      <point x="331.75" y="422.0" />
+      <point x="-49.75" y="47.5" />
+    </edge>
+    <edge source="com.github.chat.ui.LogInPage" target="com.github.chat.MainGUI">
+      <point x="93.75" y="92.5" />
+      <point x="218.75" y="701.0" />
+      <point x="205.88771929824554" y="701.0" />
+      <point x="-17.75" y="-136.5" />
+    </edge>
+    <edge source="com.github.chat.service.Backend" target="com.github.chat.model.User">
+      <point x="111.66666666666663" y="-114.5" />
+      <point x="801.598245614035" y="422.0" />
+      <point x="869.9627192982455" y="422.0" />
+      <point x="869.9627192982455" y="93.0" />
+      <point x="457.71271929824553" y="93.0" />
+      <point x="63.75" y="36.5" />
+    </edge>
+    <edge source="com.github.chat.MainGUI" target="com.github.chat.model.User">
+      <point x="53.25" y="-136.5" />
+      <point x="276.88771929824554" y="701.0" />
+      <point x="271.5" y="701.0" />
+      <point x="271.5" y="103.0" />
+      <point x="355.71271929824553" y="103.0" />
+      <point x="-38.25" y="36.5" />
+    </edge>
+    <edge source="com.github.chat.service.Backend" target="com.github.chat.model.Message">
+      <point x="-67.0" y="-114.5" />
+      <point x="622.9315789473685" y="412.0" />
+      <point x="464.41666666666663" y="412.0" />
+      <point x="82.91666666666663" y="47.5" />
+    </edge>
+    <edge source="com.github.chat.service.MessageMonitoring" target="com.github.chat.service.Backend">
+      <point x="0.0" y="-103.5" />
+      <point x="-89.33333333333337" y="114.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="277.0" y="463.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
