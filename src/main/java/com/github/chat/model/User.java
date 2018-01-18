@@ -27,6 +27,7 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
 
 
     }
+
     public User(String username, String color) {
 
         this.username = username;
@@ -56,19 +57,19 @@ Konstruktor(Name muss mit dem Namen der Klasse übereinstimmen): hier werden Obj
     und zwar den Wert, den man setzten will.
      */
 
-  public String getUsername() {
-    return username;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public String getColor() {
-    return color;
-  }
+    public String getColor() {
+        return color;
+    }
 
-  public void setColor(String color) {
-    this.color = color;
-  }
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

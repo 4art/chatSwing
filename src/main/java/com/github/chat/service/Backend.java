@@ -8,7 +8,10 @@ import java.util.List;
 
 public interface Backend {
     Health checkHealth();
+
     Message setMessage(Message message);
+
     List<Message> getMessages();
+
     Weather checkWeather();
 }

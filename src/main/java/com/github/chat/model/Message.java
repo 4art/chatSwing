@@ -20,29 +20,28 @@ public class Message {
     }
 
 
-
-    public User getUser(){
+    public User getUser() {
         return user;
     }
 
-    public void setUser(User user){
-    this.user = user;
+    public void setUser(User user) {
+        this.user = user;
 
     }
 
-    public String getMessage(){
+    public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message){
+    public void setMessage(String message) {
         this.message = message;
     }
 
-    public LocalDateTime getLocaltime(){
+    public LocalDateTime getLocaltime() {
         return localtime;
     }
 
-    public void setLocaltime (LocalDateTime localtime) {
+    public void setLocaltime(LocalDateTime localtime) {
         this.localtime = localtime;
     }
 }
